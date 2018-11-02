@@ -1,0 +1,21 @@
+h1, form {
+  text-align: center;
+}
+
+ul {
+  position: relative;
+  left: 250px;
+  margin-right: 150px;
+  list-style-type: none;
+}
+
+li > input {
+  position: absolute;
+  margin-top: 8px;
+  left: 10px;
+}
+
+li > button {
+  position: absolute;
+  left: 300px;
+}
