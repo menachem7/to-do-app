@@ -1,28 +1,14 @@
 window.onload = function () {
   onReady();
-
-  var deleteLi = document.getElementById('li')
-  if (deleteButton) {
-    deleteLi.remove();
-  }
 };
-
-const addToDoForm = document.getElementById('addToDoForm');
-const newToDoText = document.getElementById('newToDoText');
-const toDoList = document.getElementById('toDoList');
-
-// create a delete button for the li
-let deleteButton = document.createElement ('button');
-
-// text for the delete button
-let deleteContent = document.createTextNode ('Delete');
-
-// assign text inside delete button
-deleteButton.appendChild(deleteContent);
 
 function onReady () {
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
+
+    const addToDoForm = document.getElementById('addToDoForm');
+    const newToDoText = document.getElementById('newToDoText');
+    const toDoList = document.getElementById('toDoList');
 
     // get the title
     let title = newToDoText.value;
@@ -32,6 +18,15 @@ function onReady () {
 
     // create a new input
     let checkbox = document.createElement('input');
+
+    // create a delete button for the li
+    let deleteButton = document.createElement ('button');
+
+    // text for the delete button
+    let deleteContent = document.createTextNode ('Delete');
+
+    // assign text inside delete button
+    deleteButton.appendChild(deleteContent);
 
     // set the input's input to checkbox
     checkbox.type = "checkbox";
@@ -50,5 +45,9 @@ function onReady () {
 
     // empty the input
     newToDoText.value = '';
+
+    deleteButton.addEventListener('click', event => {
+      toDoList.removeChild(newLi);
+    });
   });
 };
