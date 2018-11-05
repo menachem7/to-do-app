@@ -2,20 +2,24 @@ h1, form {
   text-align: center;
 }
 
+form {
+  margin-top: 200px;
+}
+
+.centeringList {
+  text-align: center;
+}
+
 ul {
-  position: relative;
-  left: 250px;
-  margin-right: 150px;
+  width: 400px;
   list-style-type: none;
 }
 
 li > input {
-  position: absolute;
-  margin-top: 8px;
-  left: 10px;
+  position: relative
+  left: 40px;
 }
 
 li > button {
-  position: absolute;
-  left: 300px;
+  right: 30px;
 }
