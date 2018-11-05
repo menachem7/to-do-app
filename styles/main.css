@@ -1,31 +1,40 @@
-h1 {
-  margin-top: 30px;
-  font-size: 12px;
-  text-align: center;
-}
-
-form {
-  text-align: center;
+.mdl-layout-title {
+  margin-left: 50px;
   margin-top: 100px;
 }
 
+form {
+  text-align: inherit;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+#addButton {
+  right: -20px;
+  margin-bottom: 12px;
+}
+
 .centeringList {
-  text-align: center;
+  text-align: inherit;
+  margin-left: 50px;
 }
 
 #toDoList {
   list-style-type: none;
 }
 
-/* this should be for the text within the li
-li > "" {
-  left: 0px;
-} */
+li {
+  padding-top: 20px;
+}
 
 li > input {
-  left: -20px;
+  position: absolute;
+  left: 50px;
+  margin-top: 7px;
 }
 
 li > button {
-  right: 0px;
+  position: absolute;
+  left: 300px;
+  margin-top: 4px;
 }
