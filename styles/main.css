@@ -1,25 +1,31 @@
-h1, form {
+h1 {
+  margin-top: 30px;
+  font-size: 12px;
   text-align: center;
 }
 
 form {
-  margin-top: 200px;
+  text-align: center;
+  margin-top: 100px;
 }
 
 .centeringList {
   text-align: center;
 }
 
-ul {
-  width: 400px;
+#toDoList {
   list-style-type: none;
 }
 
+/* this should be for the text within the li
+li > "" {
+  left: 0px;
+} */
+
 li > input {
-  position: relative
-  left: 40px;
+  left: -20px;
 }
 
 li > button {
-  right: 30px;
+  right: 0px;
 }
