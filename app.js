@@ -10,7 +10,7 @@ function onReady () {
     toDos.push({
       title: newToDoText.value,
       complete: false,
-      id: id.value
+      number: id
     });
     id++;
 
@@ -48,9 +48,9 @@ function onReady () {
       // create delete button functionality
       deleteButton.addEventListener('click', event => {
         // compare the toDos[] with the toDos.id using .filter()
-        toDos.id = false;
-        const newToDoList = toDos.filter(toDos.id = toDos.id !== false);
-        renderTheUI();
+        toDos.number = false;
+        var newToDoList = toDos.filter(toDos.number !== false);
+        renderTheUI(newToDoList);
       });
 
       // checkbox.addEventListener('change', function() {
@@ -70,8 +70,6 @@ function onReady () {
 
   renderTheUI();
 }
-
-
 
 window.onload = function () {
   onReady();
