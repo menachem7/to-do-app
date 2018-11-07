@@ -10,7 +10,7 @@ function onReady () {
     toDos.push({
       title: newToDoText.value,
       complete: false,
-      arrayNumber: id.value
+      id: id.value
     });
     id++;
 
@@ -45,17 +45,12 @@ function onReady () {
       // assign text to deleteButton
       deleteButton.appendChild(deleteContent);
 
-      function deleteToDo () {
-        if (toDos.arrayNumber === null) {
-          return toDos.filter(toDos.arrayNumber !== null);
-        }
-      };
-
       // create delete button functionality
       deleteButton.addEventListener('click', event => {
-        toDos.arrayNumber = null;
-        deleteToDo();
-        renderTheUI(toDos);
+        // compare the toDos[] with the toDos.id using .filter()
+        toDos.id = false;
+        const newToDoList = toDos.filter(toDos.id = toDos.id !== false);
+        renderTheUI();
       });
 
       // checkbox.addEventListener('change', function() {
