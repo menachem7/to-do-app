@@ -45,15 +45,16 @@ function onReady () {
       // assign text to deleteButton
       deleteButton.appendChild(deleteContent);
 
+      function deleteToDo () {
+        if (toDos.arrayNumber === null) {
+          return toDos.filter(toDos.arrayNumber !== null);
+        }
+      };
+
       // create delete button functionality
       deleteButton.addEventListener('click', event => {
-        toDos.id = null;
-        function deleteToDo (toDos) {
-          if (toDos.id = null) {
-            return toDos.filter(toDos.id !== null);
-          }
-        }
-        toDos = deleteToDo();
+        toDos.arrayNumber = null;
+        deleteToDo();
         renderTheUI(toDos);
       });
 
