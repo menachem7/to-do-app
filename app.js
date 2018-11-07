@@ -37,18 +37,32 @@ function onReady () {
       let deleteButton = document.createElement('button');
 
       // create text for Delete Button
-      let deleteContent = ('Delete');
-
-      // assign text to deleteButton
-      deleteButton.appendChild(deleteContent);
+      let deleteContent = document.createTextNode('Delete');
 
       // assign deleteButton to li
       newLi.appendChild(deleteButton);
 
-      // // create delete button functionality
-      // deleteButton.addEventListener('onclick', event => {
-      //   var newToDos = toDos.filter(id);
-      //   renderTheUI();
+      // assign text to deleteButton
+      deleteButton.appendChild(deleteContent);
+
+      // create delete button functionality
+      deleteButton.addEventListener('click', event => {
+        toDos.id = null;
+        function deleteToDo (toDos) {
+          if (toDos.id = null) {
+            return toDos.filter(toDos.id !== null);
+          }
+        }
+        toDos = deleteToDo();
+        renderTheUI(toDos);
+      });
+
+      // checkbox.addEventListener('change', function() {
+      //     if(this.checked) {
+      //       toDos.complete = true;
+      //     } else {
+      //       toDos.complete = false;
+      //     }
       // });
     });
   }
@@ -60,6 +74,8 @@ function onReady () {
 
   renderTheUI();
 }
+
+
 
 window.onload = function () {
   onReady();
