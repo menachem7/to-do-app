@@ -10,7 +10,7 @@ function onReady () {
     toDos.push({
       title: newToDoText.value,
       complete: false,
-      number: id
+      id: id
     });
     id++;
 
@@ -24,12 +24,12 @@ function onReady () {
 
     toDoList.textContent = '';
 
-    toDos.forEach(function(toDos) {
+    toDos.forEach(function(toDo) {
       const newLi = document.createElement('li');
       const checkbox = document.createElement('input');
       checkbox.type = "checkbox";
 
-      newLi.textContent = toDos.title;
+      newLi.textContent = toDo.title;
       toDoList.appendChild(newLi);
       newLi.appendChild(checkbox);
 
@@ -48,8 +48,18 @@ function onReady () {
       // create delete button functionality
       deleteButton.addEventListener('click', event => {
         // compare the toDos[] with the toDos.id using .filter()
-        toDos.number = false;
-        var newToDoList = toDos.filter(toDos.number !== false);
+        toDo.id = null;
+
+        function deleteToDo () {
+          if (toDo.id === null) {
+            return false;
+          }
+          else {
+            return true;
+          }
+        }
+
+        var newToDoList = toDos.filter(deleteToDo);
         renderTheUI(newToDoList);
       });
 
